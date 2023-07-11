@@ -23,5 +23,21 @@ namespace PalindromeFinder.Tests
             Palindrome newPalindrome = new Palindrome(word);
             Assert.AreEqual(word, newPalindrome.Word);
         }
+
+        [TestMethod]
+        public void IsPalindrome_ChecksIfWordIsPalindrome_True()
+        {
+            string word = "tacocat";
+            Palindrome newPalindrome = new Palindrome(word);
+            Assert.AreEqual(true, newPalindrome.IsPalindrome());
+        }
+
+        [TestMethod]
+        public void IsPalindrome_ChecksIfWordIsPalindrome_False()
+        {
+            string word = "NotAPalindrome";
+            Palindrome newPalindrome = new Palindrome(word);
+            Assert.AreEqual(false, newPalindrome.IsPalindrome());
+        }
     }
 }
