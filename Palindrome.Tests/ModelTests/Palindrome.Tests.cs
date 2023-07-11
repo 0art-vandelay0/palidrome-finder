@@ -11,8 +11,17 @@ namespace PalindromeFinder.Tests
         [TestMethod]
         public void PalindromeConstuctor_CreatesInstanceOfPalindrome_Palindrome()
         {
-            Palindrome newPalindrome = new Palindrome();
+            string word = "tacocat";
+            Palindrome newPalindrome = new Palindrome(word);
             Assert.AreEqual(typeof(Palindrome), newPalindrome.GetType());
+        }
+
+        [TestMethod]
+        public void PalindromeConstuctor_CreatesInstanceOfPalindromeWithProperty_String()
+        {
+            string word = "tacocat";
+            Palindrome newPalindrome = new Palindrome(word);
+            Assert.AreEqual(word, newPalindrome.Word);
         }
     }
 }

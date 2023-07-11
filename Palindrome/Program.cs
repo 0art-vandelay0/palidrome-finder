@@ -7,7 +7,7 @@ namespace PalindromeFinder
         static void Main()
         {
             Console.WriteLine("Enter a word to see if it is a palindrome:");
-            string userWord = Console.ReadLine();
+            string word = Console.ReadLine();
         }
     }
 }
